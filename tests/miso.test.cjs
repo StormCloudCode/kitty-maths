@@ -17,8 +17,8 @@ require('../miso-story.js');
  for(let c=0;c<C.length;c++)for(let i=0;i<C[c].steps.length;i++){
   const s=C[c].steps[i];assert.equal(await page.locator('#lesson-title').innerText(),s.title);
   assert.equal(await page.locator('.symbol').count(),s.tokens.length);
-  assert.equal(await page.locator('#speech-text').innerText(),s.say);
-  await page.locator('#smaller').click();assert.equal(await page.locator('#speech-text').innerText(),s.more);await page.locator('#smaller').click();
+  assert.equal(await page.locator('#speech-text').textContent(),s.say);
+  await page.locator('#transcript').evaluate(d=>d.open=true);await page.locator('#smaller').click();assert.equal(await page.locator('#speech-text').innerText(),s.more);await page.locator('#smaller').click();
   if(['line','plane'].includes(s.kind)){
    for(const [dx,dy,n]of [[Math.sign(s.target[0]-s.start[0]),0,Math.abs(s.target[0]-s.start[0])],[0,Math.sign(s.target[1]-s.start[1]),Math.abs(s.target[1]-s.start[1])]])
     for(let k=0;k<n;k++)await page.locator(`[data-move="${dx},${dy}"]`).click();

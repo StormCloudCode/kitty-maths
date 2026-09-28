@@ -1,6 +1,6 @@
 # Kitty’s Maths
 
-A calm, interactive maths game with a kitty guide. **Version 0.1.0 — learning preview.**
+A calm, interactive maths game with a kitty guide. **Version 0.2.0 — learning preview.**
 
 Complex Numbers is the first active chapter: 36 guided activities, named symbols, step-by-step explanations, recorded female narration and word highlighting. Other chapter titles are previews, not implemented courses.
 
@@ -20,9 +20,12 @@ npm run serve
 
 Then visit `http://127.0.0.1:8766`.
 
-- **Listen to Kitty** starts narration. Pause/Resume keeps your place; the separate restart button starts over.
+- Start with the short picture cue, then explore the activity. **Read Kitty’s full explanation** expands the longer text. New visual experiments support 14 formerly text-led steps; the other activities retain their existing manipulatives.
+- **Listen to Kitty** opens the full transcript and starts narration. Pause/Resume keeps your place; the separate restart button starts over. Closing the transcript pauses narration. The new short picture cues are not narrated: the original recordings still match the full explanations exactly.
 - **Quick explanation** opens a small help card. Tap any symbol for contextual help.
 - **Search Google** opens a relevant search in a new tab. Search results are external, changeable and not endorsed as correct by the app.
+- **Human teacher** opens a selected YouTube lesson. Every guided step has a primary and alternative video. **Video details / edit** shows the selection notes, dated likes/views and replacement controls. No videos autoplay or load in the background.
+- Link edits save **only in this browser**. Use **Export my links** / **Import links** to back up and share replacements. Restore original affects only the current lesson. To change defaults for all visitors, edit `miso-video-catalog.js`, review the links and publish a new version; the public app has no shared editor or credentials.
 - **Sound → Load my music** plays your own file locally with independent volume. Select it again after reloading.
 - **Contents** opens/closes the course menu. Progress records guided activities explored, not mastery of every book exercise.
 
@@ -52,4 +55,4 @@ For branch-based GitHub Pages, publish **main /docs**. Publishing the site makes
 
 Progress is local to a browser and website origin; localhost progress does not automatically migrate to the hosted site. There are no learner accounts or analytics. This is not a clinically validated intervention or a complete exam-preparation course. Voice quality and learning suitability need human judgment.
 
-See [changelog](CHANGELOG.md) and [sources, credits and privacy](CREDITS.md). No project-wide open-source licence has been selected.
+See [changelog](CHANGELOG.md), [sources, credits and privacy](CREDITS.md), and [teacher video sources and limitations](VIDEO-SOURCES.md). No project-wide open-source licence has been selected.

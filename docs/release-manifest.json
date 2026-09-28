@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "files": [
     {
       "path": ".nojekyll",
@@ -7,11 +7,15 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "005abdc163707a9ec0a845fc9510767e09f3ec7a22143de75f0be28cf04635ff"
+      "sha256": "f35823e6b2649f02afc27e50057871744dedd9e83c94e37b14d3149541c0e27f"
     },
     {
       "path": "CREDITS.md",
-      "sha256": "3ef7a7dd851044e8eead921d2de799fdbb02c07f2260af185f4ec372697b53af"
+      "sha256": "0ce2f863f97f33e63593a0405a8ecb93875fed4ada3bc423bde139cdd52dfe20"
+    },
+    {
+      "path": "VIDEO-SOURCES.md",
+      "sha256": "39666d412c3182e5878c920bd281f163c1996a336ccaca387abd53e9b47516e0"
     },
     {
       "path": "assets/miso-no-glasses.png",
@@ -459,11 +463,11 @@
     },
     {
       "path": "game.html",
-      "sha256": "37a0c2329726d1b84a654ea98d48ac9e55882c43df4be34c45076fc273b198e9"
+      "sha256": "bcfbc1ec525c80a390a8bca50fcd65833046159fa651b0c283f536ed47b68c61"
     },
     {
       "path": "index.html",
-      "sha256": "37a0c2329726d1b84a654ea98d48ac9e55882c43df4be34c45076fc273b198e9"
+      "sha256": "bcfbc1ec525c80a390a8bca50fcd65833046159fa651b0c283f536ed47b68c61"
     },
     {
       "path": "math.js",
@@ -471,7 +475,7 @@
     },
     {
       "path": "miso-build.js",
-      "sha256": "79d4a3b4b26bde6bd1093e4306a6b66ab479c1ddb1f9a7782eb0a03ea8129e1e"
+      "sha256": "8a62210b5992f2a3b46e39aa291b57227cf1c8d459c3f99c0c7a49c9f9fc3ab7"
     },
     {
       "path": "miso-course.css",
@@ -490,6 +494,10 @@
       "sha256": "c8df68df0dcefc88c5bdf93dcad4a3caebc8779b26154be0a4d4f635850fa8d0"
     },
     {
+      "path": "miso-learning.css",
+      "sha256": "8fe11f9a3d221c448069b61b30713cd2af7ab0cb5fac5646029ab1eadb3bbbee"
+    },
+    {
       "path": "miso-lessons.js",
       "sha256": "0456310af3953ed20bb0d14a8846b5627c24de17b95e62e4ebfce18d7cc09e06"
     },
@@ -498,12 +506,24 @@
       "sha256": "a6cb467112e7fc853d75f02773854d221452077a58cdd0f84d90886de2acb603"
     },
     {
+      "path": "miso-scenes.js",
+      "sha256": "28897cfd1502dbd67dd3aaa0eadefc3a4118a0a701268c67183e475d62b28748"
+    },
+    {
       "path": "miso-sound.js",
       "sha256": "d9abe727696c4fcf4e14b6f3c47b06a9e044f15c87eed25bf4b095fae9758879"
     },
     {
       "path": "miso-story.js",
       "sha256": "87584b4a2f7399fdca022f748fa0e64a4cb87b8e525ea64e7093ef1a15317119"
+    },
+    {
+      "path": "miso-video-catalog.js",
+      "sha256": "71e47afb6614e3230e2c1bee43accfecbc73f3835dec8e34b22c9436bb75e762"
+    },
+    {
+      "path": "miso-videos.js",
+      "sha256": "da6d8fe99d6338374d38ec08809a6a8a092957691362f00141c1e97f83066d78"
     },
     {
       "path": "miso-voice.js",
@@ -515,7 +535,7 @@
     },
     {
       "path": "miso.js",
-      "sha256": "01a25a4c302910c71bcb74c05440dc642aea9051fb8c10664046109518f529eb"
+      "sha256": "04abdc964dafd8dee81e68015781ac1fb7eb9371b598f34c8d8bbd16062b05b7"
     }
   ]
 }

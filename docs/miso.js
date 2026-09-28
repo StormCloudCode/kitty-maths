@@ -27,6 +27,7 @@ function highlight(){
 }
 function voiceEntry(part){const id=`${step().id}-${part}`,e=window.MISO_VOICE?.[id];return e?.text===step()[part]?e:null;}
 async function speak(part=speaking){
+ $('transcript').open=true;
  if(purr){purr.pause();purr=null;}if(prefs.quiet)return;
  const id=`${step().id}-${part}`,entry=voiceEntry(part);
  if(!entry){stopVoice();$('audio-status').textContent='This recording is unavailable. You can still read the explanation; no different script or device voice will play.';return;}
@@ -38,6 +39,7 @@ async function speak(part=speaking){
  try{await audio.play();if(narrator!==audio||attempt!==playAttempt||audio.paused)return;window.MisoSound?.setNarrating(true);highlight();}catch(error){if(narrator!==audio||attempt!==playAttempt)return;if(error.name==='AbortError'){pauseVoice();return;}stopVoice();$('audio-status').textContent='This voice clip could not play. The explanation stays here to read; no device voice will replace it.';}
 }
 function setSpeech(part,read=true){stopVoice();speaking=part;const entry=voiceEntry(part);$('speech-text').textContent=step()[part];
+ if(part!=='say')$('transcript').open=true;
  if(entry?.words?.length&&entry.words.map(w=>w.text).join('')===entry.text)$('speech-text').innerHTML=entry.words.map((w,i)=>`<span data-word="${i}">${esc(w.text)}</span>`).join('');
  $('speech-label').textContent=part==='success'?'WHAT YOU JUST FOUND':part==='more'?'ONE SMALL PIECE AT A TIME':'LET’S START WITH SOMETHING YOU CAN SEE';$('smaller').textContent=part==='more'?'Back to the short explanation':'Break this down for me';$('audio-status').textContent=entry?'':'Recording unavailable for this explanation.';$('voice-restart').disabled=!entry;if(read&&voiceEnabled&&prefs.auto&&!prefs.quiet)speak(part);
 }
@@ -52,6 +54,7 @@ function render(){const s=step();document.body.classList.toggle('reduced',!!pref
  $('chapter-tag').textContent=chapter().name;$('lesson-title').textContent=s.title;$('task').textContent=s.task;$('board').dataset.kind=s.kind;
  $('symbol-strip').innerHTML=s.tokens.map(([symbol,name],i)=>`<button type="button" class="symbol" data-help-token="${i}" aria-haspopup="dialog" aria-label="Explain ${esc(symbol)}: ${esc(name)}"><b>${esc(symbol)}</b><span>${esc(name)}</span></button>`).join('');
  window.MisoHelp?.update(s);
+ window.MisoVideos?.update(s);window.MisoScenes?.update(s);$('transcript').open=false;
  $('back').disabled=ci===0&&si===0;$('next').disabled=!st.solved;$('next').innerHTML=st.solved?(isLast()?'Choose another discovery ↗':'I get it. Let’s keep going →'):'Try the little activity first →';
  $('quiet').textContent=prefs.quiet?'Sound off':'Sound on';$('quiet').setAttribute('aria-pressed',String(prefs.quiet));$('audio-status').textContent='';
  setSpeech(st.solved?'success':'say');draw();
@@ -59,9 +62,9 @@ function render(){const s=step();document.body.classList.toggle('reduced',!!pref
 function yarn(x,y,draggable=true){return `<g transform="translate(${x} ${y})" ${draggable?'data-drag="yarn"':''}><circle r="24" fill="transparent"/><circle r="15" fill="#d58556" stroke="#9f5932" stroke-width="1.5"/><path d="M-12 -6 Q5 -15 11 8 M-14 0 Q0 -8 14 4 M-11 9 Q0 -1 14 -3 M-7 -12 Q-14 1 0 14 M0 -14 Q-7 0 8 12" fill="none" stroke="#f4c49a" stroke-width="1.8"/><path d="M10 12 Q22 23 30 14" fill="none" stroke="#b97143" stroke-width="2"/></g>`;}
 function svg(body,label,box='0 0 400 270'){return `<svg viewBox="${box}" role="img" aria-label="${esc(label)}">${body}</svg>`;}
 function arrowButton(dx,dy,label){return `<button data-move="${dx},${dy}" aria-label="${label}">${label}</button>`;}
-function drawLine(){const s=step(), scale=39, y=123, x=a=>200+a*scale;let body='<path d="M30 151 Q200 162 370 151" fill="none" stroke="#d7e2cf" stroke-width="26" stroke-linecap="round"/>';
+function drawLine(){const s=step(), scale=39, y=123, x=a=>200+a*scale;let body='<rect x="22" y="140" width="356" height="14" rx="4" fill="#ddbbc5" stroke="#b8879b"/><path d="M47 154 v18 M353 154 v18" stroke="#b8879b" stroke-width="8"/>';
  body+=`<line x1="${x(-4)}" y1="${y}" x2="${x(4)}" y2="${y}" stroke="#c2d0b6" stroke-width="3"/>`;
- for(let a=-4;a<=4;a++)body+=`<g data-point="${a},0"><rect x="${x(a)-19}" y="${y-19}" width="38" height="61" rx="12" fill="transparent"/><ellipse cx="${x(a)}" cy="${y+3}" rx="16" ry="11" fill="${a===s.target[0]?'#f1d9a6':'#e5e8d9'}" stroke="${a===s.target[0]?'#b18642':'#ccd4c0'}"/><text x="${x(a)}" y="${y+40}" text-anchor="middle" font-weight="${a===0?700:400}">${M.fmt(a)}</text></g>`;
+ for(let a=-4;a<=4;a++)body+=`<g data-point="${a},0"><rect x="${x(a)-19}" y="${y-19}" width="38" height="67" rx="8" fill="transparent"/><rect x="${x(a)-16}" y="${y-9}" width="32" height="24" rx="5" fill="${a===s.target[0]?'#f5d1e5':'#faf0f7'}" stroke="${a===s.target[0]?'#985080':'#dbc2d5'}"/><text x="${x(a)}" y="${y+56}" text-anchor="middle" font-weight="${a===0?700:400}">${M.fmt(a)}</text></g>`;
  body+=`<text x="${x(s.target[0])}" y="73" text-anchor="middle" class="axis-label">toy’s home</text><path d="M${x(s.target[0])} 81 v14" stroke="#b18642" stroke-width="2"/>${yarn(x(st.a),y-13)}<text x="200" y="205" text-anchor="middle" class="axis-label">← negative · zero · positive →</text>`;
  $('board').innerHTML=svg(body,'A number line from minus four to four. Move the yarn to '+s.target[0],'0 53 400 169');
  $('controls').innerHTML=arrowButton(-1,0,'← One left')+arrowButton(1,0,'One right →');status(`The yarn is at ${M.fmt(st.a)}.`);
@@ -107,7 +110,7 @@ function drawDistance(keepControls=false){const p=planeBase(5),{x,y}=p;const bod
  $('board').innerHTML=svg(body,'Right triangle with sides three and four. Choose the straight-line distance.');if(!keepControls)$('controls').innerHTML=`<label>Ribbon length <input id="length" type="range" min="1" max="8" value="${st.length}" aria-label="Straight-line distance"></label><button data-check-length>Check length</button>`;status(`Your guess: ${st.length}. Calculation: 3 * 3 + 4 * 4 = 25. √25 = 5.`);
 }
 function choiceOrder(count){const shift=(ci+si)%count;return Array.from({length:count},(_,i)=>(i+shift)%count);}
-function drawChoice(){const s=step();$('board').innerHTML=(s.id==='negative-square'?'<div class="number-experiment"><label>Try a number <input id="number-experiment" type="range" min="-3" max="3" value="1" aria-label="Number to square"></label><output id="number-result">1 * 1 = 1</output><span>Whatever you choose here, the result is never negative.</span></div>':'')+`<p class="choice-question">${esc(s.question)}</p><div class="options">${choiceOrder(s.options.length).map(i=>`<button class="option ${st.selected.includes(i)?'selected':''}" data-choice="${i}" ${s.kind==='multi'?`aria-pressed="${st.selected.includes(i)}"`:''}>${esc(s.options[i])}</button>`).join('')}</div>`;$('controls').innerHTML=s.kind==='multi'?'<button data-check-multi>Check my two choices</button>':'';status(s.kind==='multi'?`${st.selected.length} of 2 choices selected.`:'There is no penalty for trying.');}
+function drawChoice(){const s=step();$('board').innerHTML=(window.MisoScenes?.visual(s)||'')+(s.id==='negative-square'?'<div class="number-experiment"><label>Try a number <input id="number-experiment" type="range" min="-3" max="3" value="1" aria-label="Number to square"></label><output id="number-result">1 * 1 = 1</output><span>Whatever you choose here, the result is never negative.</span></div>':'')+`<p class="choice-question">${esc(s.question)}</p><div class="options">${choiceOrder(s.options.length).map(i=>`<button class="option ${st.selected.includes(i)?'selected':''}" data-choice="${i}" ${s.kind==='multi'?`aria-pressed="${st.selected.includes(i)}"`:''}>${esc(s.options[i])}</button>`).join('')}</div>`;$('controls').innerHTML=s.kind==='multi'?'<button data-check-multi>Check my two choices</button>':'';status(s.kind==='multi'?`${st.selected.length} of 2 choices selected.`:'There is no penalty for trying.');}
 function products(){const s=step();return [{label:`${s.a} × ${s.c}`,value:M.complex(s.a*s.c,0)},{label:`${s.a} × ${M.complex(0,s.d)}`,value:M.complex(0,s.a*s.d)},{label:`${M.complex(0,s.b)} × ${s.c}`,value:M.complex(0,s.b*s.c)},{label:`${M.complex(0,s.b)} × ${M.complex(0,s.d)}`,value:M.complex(-s.b*s.d,0)}];}
 function drawProducts(){const s=step(),p=products(),j=Math.min(st.products,3),value=p[j].value,opts=[...new Set([value,M.complex(s.a+s.c,s.b+s.d),value==='−1'?'1':'−1',value+'i'])].slice(0,3);let matrix='<div class="products-grid"><div class="header">×</div>'+`<div class="header">${s.c}</div><div class="header">${M.complex(0,s.d)}</div>`;
  [0,1].forEach(row=>{matrix+=`<div class="header">${row?M.complex(0,s.b):s.a}</div>`;[0,1].forEach(col=>{const n=row*2+col;matrix+=`<div class="product-cell ${n<st.products?'filled':n===st.products?'current':''}">${n<st.products?esc(p[n].value):'?'}</div>`;});});matrix+='</div>';
@@ -138,6 +141,7 @@ function pet(){pauseVoice();const cat=$('pet-miso');cat.classList.remove('petted
 function menu(){stopAll(false);window.MisoYouTube?.pause();cancelDemo();$('voice-auto').checked=!!prefs.auto;$('motion').checked=!!prefs.reduce;$('large').checked=!!prefs.large;$('volume').value=prefs.volume;$('rate').value=prefs.rate;$('menu-dialog').showModal();}
 document.addEventListener('miso:navigate',e=>{const {ci:c,si:i}=e.detail;if(Number.isInteger(c)&&Number.isInteger(i)&&C[c]?.steps[i])go(c,i);});
 document.addEventListener('miso:help-open',()=>{pauseVoice();cancelDemo();});
+$('transcript').addEventListener('toggle',()=>{if(!$('transcript').open)pauseVoice();});
 document.addEventListener('click',e=>{if(suppressClick&&e.target.closest('#board')){suppressClick=false;return;}const b=e.target.closest('button,[data-point],[data-root]');if(!b)return;
  if(b.dataset.close){$(b.dataset.close).close();return;}
  if(b.dataset.move){const [a,c]=b.dataset.move.split(',').map(Number);move(st.a+a,st.b+c);}if(b.dataset.point){const[a,c]=b.dataset.point.split(',').map(Number);move(a,c);}

@@ -1,1 +1,1 @@
-window.MISO_BUILD={"version":"0.1.0","sourcePages":false};
+window.MISO_BUILD={"version":"0.2.0","sourcePages":false};

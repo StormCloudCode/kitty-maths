@@ -10,10 +10,13 @@ Mathematical cross-check: [Emory’s complex-number notes](https://math.oxford.e
 
 Google buttons open ordinary topic-specific searches in another tab. The app does not fetch, quote or certify search results or AI Overviews. Results may change and can be wrong. No Google request is made until a link is followed.
 
+Teacher-video links are documented in [VIDEO-SOURCES.md](VIDEO-SOURCES.md). YouTube opens only on request, in a new tab; there is no embedded player or automatic tracking request. Human-led lessons were selected using topic information and dated public likes/views, not independent teaching-quality scores. Third-party ads, recommendations and future availability are not controlled by Kitty. User replacement links are saved locally and labelled unreviewed.
+
 ## Narration and sound
 
 - AI-generated voice: `en-GB-SoniaNeural`, generated with [edge-tts](https://github.com/rany2/edge-tts) 7.2.8. The saved MP3s play without an API key or API credits. Creating new recordings uses the online speech service; its future availability is not guaranteed.
 - Actual provider WordBoundary timestamps drive highlighting. Display text must match its recording or playback is blocked. No device-speech fallback or cloned real-person voice.
+- In v0.2.0, the new short picture cues are not narrated. Listening opens the full, exactly matching original transcript. All 108 saved narration scripts and audio files are retained unchanged.
 - Purr: [Whiskers’ purr by Adam Cuerden](https://commons.wikimedia.org/wiki/File:Whiskers%27_purr.ogg), released into the public domain by its creator. The recording is unchanged; playback is shortened and reduced in volume.
 - The kitty illustrations are AI-generated project assets. The two active sprites are `miso-no-glasses.png` and `miso-petted-no-glasses.png`.
 - Music chosen from a device is played using a local object URL, not uploaded. Select it again after reloading. Both the built-in drone and the linked YouTube drone player have been removed.
