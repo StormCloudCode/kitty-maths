@@ -6,6 +6,10 @@ Complex Numbers is the first active chapter: 36 guided activities, named symbols
 
 ## Use the app
 
+[**Open Kitty’s Maths in your browser**](https://stormcloudcode.github.io/kitty-maths/) — no GitHub account or installation required. You can share this link with anyone.
+
+The website and app repository are public, not an unlisted/private sharing service. The textbook PDF and scans remain excluded.
+
 The GitHub Pages build is in `docs/`. Open its `index.html`, or run:
 
 ```sh
