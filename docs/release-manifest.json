@@ -1,0 +1,521 @@
+{
+  "version": "0.1.0",
+  "files": [
+    {
+      "path": ".nojekyll",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "005abdc163707a9ec0a845fc9510767e09f3ec7a22143de75f0be28cf04635ff"
+    },
+    {
+      "path": "CREDITS.md",
+      "sha256": "3ef7a7dd851044e8eead921d2de799fdbb02c07f2260af185f4ec372697b53af"
+    },
+    {
+      "path": "assets/miso-no-glasses.png",
+      "sha256": "0415d358d395e751348f361fb443f033f09f3548ac4e358deeb57504c2e0e5a0"
+    },
+    {
+      "path": "assets/miso-petted-no-glasses.png",
+      "sha256": "7e7cac4179cb7267a430351490f0faf9cf16fb3cc91c77be86b07a0affe45275"
+    },
+    {
+      "path": "assets/purr.ogg",
+      "sha256": "cd4bd1d17f838bc54cc19aa6d3cc2e7dfcd2d2648ff6e468a0a6665db5e66d6e"
+    },
+    {
+      "path": "assets/voice-sonia/addition-more.mp3",
+      "sha256": "e9f986e6d14020c584531f10c102b616b4b5cd001279e9748d994ab2ad30db23"
+    },
+    {
+      "path": "assets/voice-sonia/addition-say.mp3",
+      "sha256": "470472a77d368cf4a9792cecedd6ecdfc88f73ce397f8c13b2fefd2da63c08b2"
+    },
+    {
+      "path": "assets/voice-sonia/addition-success.mp3",
+      "sha256": "1f114058ec116dfa3fde35c1e57c0cf90ee5cee614795c5cf90c1af4b7c6ff77"
+    },
+    {
+      "path": "assets/voice-sonia/book-product-more.mp3",
+      "sha256": "31046c6d3257410e743e203578b721f02b3f34c75131fb667b8b5e64445ce16f"
+    },
+    {
+      "path": "assets/voice-sonia/book-product-say.mp3",
+      "sha256": "1c2a123d4af74bfbe365dc89129a16d836278bc1a74bab66231332f31cd7adc9"
+    },
+    {
+      "path": "assets/voice-sonia/book-product-success.mp3",
+      "sha256": "2768100644df18bbeff44db65afbab108356227b8487c76ddc2e70cc1b98e21a"
+    },
+    {
+      "path": "assets/voice-sonia/cancel-i-more.mp3",
+      "sha256": "ab47589909ceaf1ed158fa71e602d3c2fd42f56fea7a6511e3a5fdc23688170d"
+    },
+    {
+      "path": "assets/voice-sonia/cancel-i-say.mp3",
+      "sha256": "aa2d0a80f10948042c6298a3faa5b3c6c2a6fb490437143b43d588c6d03a81f1"
+    },
+    {
+      "path": "assets/voice-sonia/cancel-i-success.mp3",
+      "sha256": "dcffd8de6907993b8bc7edc67b9ea51cb930a12d254a1637e94b0cb371690794"
+    },
+    {
+      "path": "assets/voice-sonia/complete-square-more.mp3",
+      "sha256": "ed802e78eedff7f8d907d7880ae77edf47f3308af8e5eaeed62e7c6bd302358d"
+    },
+    {
+      "path": "assets/voice-sonia/complete-square-say.mp3",
+      "sha256": "9ac100928f59fc4dd020c8ae5015ea4161c103d91fbfa742f7ce4aa1b56b3e3f"
+    },
+    {
+      "path": "assets/voice-sonia/complete-square-success.mp3",
+      "sha256": "45c7763f1acb52df0c3cefc8974d7872d7473baba82fc3252f838a861f61e097"
+    },
+    {
+      "path": "assets/voice-sonia/complex-more.mp3",
+      "sha256": "bfe4ae66139781cb63ba6d638aec18fbc706d57809b5bd667ef6ce03b9552ad8"
+    },
+    {
+      "path": "assets/voice-sonia/complex-say.mp3",
+      "sha256": "b13bb15d6bd5abb4ca33f258b7a5739d10a502a7deb0d418214bd461725486be"
+    },
+    {
+      "path": "assets/voice-sonia/complex-success.mp3",
+      "sha256": "3e0e2b290788a3dab76407d8a077a29871a529d039d74e311e6e2ba46b70a07f"
+    },
+    {
+      "path": "assets/voice-sonia/cube-roots-more.mp3",
+      "sha256": "27abbd497c122eb41c598695220715e44f6f70182ccbc008346859a9bc6b00de"
+    },
+    {
+      "path": "assets/voice-sonia/cube-roots-say.mp3",
+      "sha256": "22ae0fb7837363c57e499d9de30d8c8aeec91be3fd7162c09d39ae6974beb2e5"
+    },
+    {
+      "path": "assets/voice-sonia/cube-roots-success.mp3",
+      "sha256": "9d4df3acc1e4bbbebab7eb0b6ac118fa8c1ebc3ba2f7ee43fac936cf68c51821"
+    },
+    {
+      "path": "assets/voice-sonia/cycle-more.mp3",
+      "sha256": "62759d270e12dc7600b5687c3614242185261e0a46b1fa5ba910ba0335d1b02a"
+    },
+    {
+      "path": "assets/voice-sonia/cycle-say.mp3",
+      "sha256": "aa4dc32a72ff330825e6637a02ff0b04fc063d3d12d3c4c22c1ede4cf2a71a6b"
+    },
+    {
+      "path": "assets/voice-sonia/cycle-success.mp3",
+      "sha256": "b09e22efc0534d4884797bfde13e2c2c14812ba2f9c21d72df73af02ed727897"
+    },
+    {
+      "path": "assets/voice-sonia/define-i-more.mp3",
+      "sha256": "d5a4f7ff2bc160ef6abc4bff082d427b262a96627f180821effe4806d793bf5c"
+    },
+    {
+      "path": "assets/voice-sonia/define-i-say.mp3",
+      "sha256": "69c9eabaa99271f272771b274ce7c6e3a53735d796f5524f5b0301c8a45637ee"
+    },
+    {
+      "path": "assets/voice-sonia/define-i-success.mp3",
+      "sha256": "9734f53a89a7322dd22dfb2d21193731237f05bc152162af9c181e3e45416958"
+    },
+    {
+      "path": "assets/voice-sonia/distance-more.mp3",
+      "sha256": "9c7412b6e0c5a582c916ffd1ca146f1b411041c4de012c71d5cc39050fe278aa"
+    },
+    {
+      "path": "assets/voice-sonia/distance-say.mp3",
+      "sha256": "82d9ab0b357c70f924eabcbe00f2a017d3d4797951db1afbc0cba0511b8d47c5"
+    },
+    {
+      "path": "assets/voice-sonia/distance-success.mp3",
+      "sha256": "725e28f8ffbd60454fdd63d49205370b8c71437986cd717787e627f1f5d3b8ba"
+    },
+    {
+      "path": "assets/voice-sonia/divide-more.mp3",
+      "sha256": "5734184e014a22bc10f18948de7c68f3de9fceae1fb5ab7d2daa840de8d26d7a"
+    },
+    {
+      "path": "assets/voice-sonia/divide-say.mp3",
+      "sha256": "348f9ff2e04a2d7c68cb83ffe84577c064eb2b4c4ca2aff1884fd84969788a12"
+    },
+    {
+      "path": "assets/voice-sonia/divide-success.mp3",
+      "sha256": "6aac02b6665ab62d13e136728a2022ba8e3ee6025f9d2ef1341ea53d9551f803"
+    },
+    {
+      "path": "assets/voice-sonia/four-roots-more.mp3",
+      "sha256": "9f368dc982636ba7bb0c6ad69e8a9d9cee486c32e57ba0c79d746a2f9ad6002e"
+    },
+    {
+      "path": "assets/voice-sonia/four-roots-say.mp3",
+      "sha256": "e21bd006c54dc9bf8cdcabacf122247b5c82c7878f36af0640338548716699ec"
+    },
+    {
+      "path": "assets/voice-sonia/four-roots-success.mp3",
+      "sha256": "22eed2a061a2bd9cc0ae9e69f793f7a28ecca2834106871bddbe31d18659d0fa"
+    },
+    {
+      "path": "assets/voice-sonia/identity-more.mp3",
+      "sha256": "0d8726362aa35fd1fd9fb081fd8b94f06c4532713a3bef22f6e8cf59e14d438b"
+    },
+    {
+      "path": "assets/voice-sonia/identity-say.mp3",
+      "sha256": "a9b5ed916a464b509fad20e0874833ff03051f05fe1b968aee9350245875be3b"
+    },
+    {
+      "path": "assets/voice-sonia/identity-success.mp3",
+      "sha256": "b32fd8a3537f2878a4876fee36ced0a87446c9d9e85c2eccedb0abfe97536c9b"
+    },
+    {
+      "path": "assets/voice-sonia/line-more.mp3",
+      "sha256": "575cd8dea7f18c99e9fb7689c8c0fc5129af8752d5f93037de6f7ef78391cc67"
+    },
+    {
+      "path": "assets/voice-sonia/line-say.mp3",
+      "sha256": "2beae9afc03d6cfa48b45aba9adf62f502fd52891496ff27fbca490f21b789cb"
+    },
+    {
+      "path": "assets/voice-sonia/line-success.mp3",
+      "sha256": "016156c68d7fc631a4c0888970042c1dc2701fce7d99e273c11d7fb8a98e45f7"
+    },
+    {
+      "path": "assets/voice-sonia/map-more.mp3",
+      "sha256": "2fe2c01dd60f69dddffa52a6f9e32221ad57a4b196d6841cfcee870cc067c332"
+    },
+    {
+      "path": "assets/voice-sonia/map-say.mp3",
+      "sha256": "efd959da731264be294dd5ef58f7992f5075f1b68bbb5e673a5875a72f37b59b"
+    },
+    {
+      "path": "assets/voice-sonia/map-success.mp3",
+      "sha256": "6d5a808e53f668ac440e024e414791d8c69cc3b44218dcf5f91e5bc3846dbce7"
+    },
+    {
+      "path": "assets/voice-sonia/mirror-more.mp3",
+      "sha256": "95c0c01fbf51bef5176640f35d9c0119b3efd166d22510f408d365b87d1e1d0a"
+    },
+    {
+      "path": "assets/voice-sonia/mirror-say.mp3",
+      "sha256": "4754953d21451cd499c4385f349e479c5755d2ad4dc7bc015349741a3aae0927"
+    },
+    {
+      "path": "assets/voice-sonia/mirror-success.mp3",
+      "sha256": "9bebddf8b60a3e0839b5c673cb1ee36837866c6b0afabecfd36a32ea4620d68b"
+    },
+    {
+      "path": "assets/voice-sonia/modulus-more.mp3",
+      "sha256": "f28a4b0eaaf4878a94531566c2ee461adc228e3f28f34e2b7093bdb8b001303e"
+    },
+    {
+      "path": "assets/voice-sonia/modulus-say.mp3",
+      "sha256": "07fd5166939fd21e7223ef9c7fc3af00c24ff945ad5b5c87ecaa7a9f9bc31637"
+    },
+    {
+      "path": "assets/voice-sonia/modulus-success.mp3",
+      "sha256": "f8dbee98e90e3188c92faee6be4c445fcd7b9690b1e071627aec18ea169d5ddc"
+    },
+    {
+      "path": "assets/voice-sonia/multiply-more.mp3",
+      "sha256": "1da147ab9a0b0cb57081a396a6dbaa9fcb38e6653c092c30c1e3c6b7b2c8301e"
+    },
+    {
+      "path": "assets/voice-sonia/multiply-say.mp3",
+      "sha256": "7a5ccbf3e191576120b2ff8f24f75dcab3f79c235b88861b05380938284882af"
+    },
+    {
+      "path": "assets/voice-sonia/multiply-success.mp3",
+      "sha256": "7277c2433ff2627680d189f41c482c7a790811e2f42b1d4c6ffad6f248751b0f"
+    },
+    {
+      "path": "assets/voice-sonia/negative-more.mp3",
+      "sha256": "edfe5e004f34dcb0577e3b9cb1a4f77086d354cacc7a848725d3c48831391a45"
+    },
+    {
+      "path": "assets/voice-sonia/negative-say.mp3",
+      "sha256": "a586cdcc256ca820d12d050fdc52fedd1ac79599c4d6d29fb06adde71b45ae44"
+    },
+    {
+      "path": "assets/voice-sonia/negative-square-more.mp3",
+      "sha256": "04eafea04fff67e75752756588c34329b162ace783ee0b1a79605b4a0f79bc11"
+    },
+    {
+      "path": "assets/voice-sonia/negative-square-say.mp3",
+      "sha256": "76ff36b5824945d4dc10578945ccf9459957e5370d591cc33c863ffdcc5fac93"
+    },
+    {
+      "path": "assets/voice-sonia/negative-square-success.mp3",
+      "sha256": "6a96995d5d447e32efd18b2047a916caa6d4bcc299f87e0b84b106667926ccaa"
+    },
+    {
+      "path": "assets/voice-sonia/negative-success.mp3",
+      "sha256": "38fef73522039c0139705f6074f986d4653a1dcc277a945a4ee8aaf6e6f0b7eb"
+    },
+    {
+      "path": "assets/voice-sonia/parts-more.mp3",
+      "sha256": "4851dca601cfc30419354d0680004d53dedf9f9ba522cba8d01fb94f163f3ae6"
+    },
+    {
+      "path": "assets/voice-sonia/parts-say.mp3",
+      "sha256": "1b9e7b33048cf5949d5c526e1e9eca4cb4db99e3592ce02580436c0193143848"
+    },
+    {
+      "path": "assets/voice-sonia/parts-success.mp3",
+      "sha256": "95627ff62f4b1a20685d6b87e29f41f7f028da7300fee5148cdd3de875854923"
+    },
+    {
+      "path": "assets/voice-sonia/polar-book-more.mp3",
+      "sha256": "b825d382665264152548691166fdca69421eeb2cf0c84d8f21ce8db7c3efdddc"
+    },
+    {
+      "path": "assets/voice-sonia/polar-book-say.mp3",
+      "sha256": "b2ec4d62a5d43db7e8cb6528c1e4a959f7dd3f7b1d75cae4506524a0398d4c12"
+    },
+    {
+      "path": "assets/voice-sonia/polar-book-success.mp3",
+      "sha256": "ca33b4f3d981a906eadb7105786c5188b57afd9b16da2a9473ddedfb240d529b"
+    },
+    {
+      "path": "assets/voice-sonia/polar-divide-more.mp3",
+      "sha256": "2c0bbe7787270c16ccd466d0b4cc0d0f1e090df0598a33e5d29aeb9148371409"
+    },
+    {
+      "path": "assets/voice-sonia/polar-divide-say.mp3",
+      "sha256": "e68b07d85ae1452489b5676ff67f380cec0390a4351540f9499869bc603db169"
+    },
+    {
+      "path": "assets/voice-sonia/polar-divide-success.mp3",
+      "sha256": "af87435ff0552b924febe16dbd4cc5a3782a6e48f89b562b3d3d74503ecd2ac6"
+    },
+    {
+      "path": "assets/voice-sonia/polar-more.mp3",
+      "sha256": "c9cf932d597ce8ac54f6e58a61649e177d09b5e54cca3af7af52ca7f69205db7"
+    },
+    {
+      "path": "assets/voice-sonia/polar-product-more.mp3",
+      "sha256": "0625962a5396d76d6d1a8843a5a2f23c3eca7331f872ce4d18afc8cbd7379d46"
+    },
+    {
+      "path": "assets/voice-sonia/polar-product-say.mp3",
+      "sha256": "2ad9ec47d9a56bd48a5e352d35a359273e0a34ec12c11c2776977fc2b0384bbf"
+    },
+    {
+      "path": "assets/voice-sonia/polar-product-success.mp3",
+      "sha256": "2dfea32bc2080b7e46239f4259226368889834be17c82c9700642be2fbfcf42d"
+    },
+    {
+      "path": "assets/voice-sonia/polar-say.mp3",
+      "sha256": "d4f8232712cc2e084598a08e25e2346f93ad9106ef72b4d28d1c39060fd4128d"
+    },
+    {
+      "path": "assets/voice-sonia/polar-success.mp3",
+      "sha256": "d925e5e65e4c729981db7a4f1f09251a7bc7de49e6dca8dea06c7dd25fb5a90a"
+    },
+    {
+      "path": "assets/voice-sonia/powers-more.mp3",
+      "sha256": "372dcd8ce406e9e69110fa8392fff857beee0ae5c0d4c0b3186ca9df870d468b"
+    },
+    {
+      "path": "assets/voice-sonia/powers-say.mp3",
+      "sha256": "52d2acb3d47b00ef76c6996ba9484f8c17d92863456b565104e6d42a962cb7ed"
+    },
+    {
+      "path": "assets/voice-sonia/powers-success.mp3",
+      "sha256": "45bd6ece45b23434101e7197db7e079745a4a507b3ab70c886085d6ddea9d4d1"
+    },
+    {
+      "path": "assets/voice-sonia/quarter-more.mp3",
+      "sha256": "1634645da26145cd2b39876cd8cd8fbca80fd4344e62726161d300fa6176880d"
+    },
+    {
+      "path": "assets/voice-sonia/quarter-say.mp3",
+      "sha256": "f96135b295a3cd8e40f241dfe873c964c3a117f01e805992db1fc7eb09adf3fd"
+    },
+    {
+      "path": "assets/voice-sonia/quarter-success.mp3",
+      "sha256": "3902c46aac737fee78bc58e8c017c481e2368a04e3aceeadc0ce0b14938cf846"
+    },
+    {
+      "path": "assets/voice-sonia/radians-more.mp3",
+      "sha256": "2dcbbd22fb2a8cfae286d5dfe712479d0afb6858d8eb892634c990c64b3f826b"
+    },
+    {
+      "path": "assets/voice-sonia/radians-say.mp3",
+      "sha256": "5541e9f53dacd4409e985e247082fd66fc4189272e2423aa4abe7770f8aed907"
+    },
+    {
+      "path": "assets/voice-sonia/radians-success.mp3",
+      "sha256": "46f7a33b6e3b43a1a1b8d82e139e12a4cf67730903ce018dda1598e02d1821db"
+    },
+    {
+      "path": "assets/voice-sonia/root-more.mp3",
+      "sha256": "a7c3f41c25b41134aa4124b79fedcfdaeb8c054d4cc27d1ebd72c4a2c9370a13"
+    },
+    {
+      "path": "assets/voice-sonia/root-say.mp3",
+      "sha256": "35c46b3bbc94ddfed05307da5c476ef5420b0766bdbb9f75b5039eebbc2a55e2"
+    },
+    {
+      "path": "assets/voice-sonia/root-success.mp3",
+      "sha256": "0932d848b2aa1123ac69deb87b14da4e8a701569e968f2677326156e57ecc608"
+    },
+    {
+      "path": "assets/voice-sonia/roots-equation-more.mp3",
+      "sha256": "6e24d9520a2016e73962a53e5eb512d92a210aa0cfb142523c68d0e77f0f1a84"
+    },
+    {
+      "path": "assets/voice-sonia/roots-equation-say.mp3",
+      "sha256": "4851aebc9cd3efbb6b59e043b22987c5f2a70f39c8f7323a70893d44fb3eb75c"
+    },
+    {
+      "path": "assets/voice-sonia/roots-equation-success.mp3",
+      "sha256": "f094a6bf9e5d169266659250842c27e93e7b2d4af11bf8c1dc184aebca035741"
+    },
+    {
+      "path": "assets/voice-sonia/square-more.mp3",
+      "sha256": "a4508ed7dc34b77a44bec737183c9ff572de5db0eab17cc4a4cf09a30dd70a0c"
+    },
+    {
+      "path": "assets/voice-sonia/square-say.mp3",
+      "sha256": "e8b174cdd607d4f1bee000f96819dbe5f430dfa6b681e4e900d3e9159dcc6eed"
+    },
+    {
+      "path": "assets/voice-sonia/square-success.mp3",
+      "sha256": "9c76061b1880debc4953075dac085e698f9511f665d7b3287b0bace32a19d7e8"
+    },
+    {
+      "path": "assets/voice-sonia/subtract-more.mp3",
+      "sha256": "6f4f9a0125f34d32c6c1e4948bfb7e99f79e9f70bab4d850eb87b8ba8e5021fd"
+    },
+    {
+      "path": "assets/voice-sonia/subtract-say.mp3",
+      "sha256": "f302a8d08d3cd284b95ac3a785a0688c245e181dede7f900d57b5740cfb6f9b9"
+    },
+    {
+      "path": "assets/voice-sonia/subtract-success.mp3",
+      "sha256": "ce8657acfce35a79c9373c202bea90d14d5c5c2ed8f02a0926837837683d62ad"
+    },
+    {
+      "path": "assets/voice-sonia/surd-more.mp3",
+      "sha256": "af36b3b7091f98bdcd24b7c159a3580318035d5b754b8bcb21aee350a3b50ba3"
+    },
+    {
+      "path": "assets/voice-sonia/surd-say.mp3",
+      "sha256": "49e65e0126fc9c7d6849c5154b2db4326da6c7fff3cdcf989795ae9133e7e1e8"
+    },
+    {
+      "path": "assets/voice-sonia/surd-success.mp3",
+      "sha256": "747bb3889c69205f843657345ac4e4c07ade3a65cf9e9ad2243959d124c3a132"
+    },
+    {
+      "path": "assets/voice-sonia/trig-more.mp3",
+      "sha256": "3acee7e9a35503bacb39f1c4a551c208e584670a191b41fefc7d871e8a79b91c"
+    },
+    {
+      "path": "assets/voice-sonia/trig-say.mp3",
+      "sha256": "30971d74647ea5612d87a3147f1384b4d7ad057d0cdcf84f7a3de704661f5bac"
+    },
+    {
+      "path": "assets/voice-sonia/trig-success.mp3",
+      "sha256": "b5bee70a80d0eafbf7ebd815db07e19858c9616297c1f78f3342b0b49ce4470b"
+    },
+    {
+      "path": "assets/voice-sonia/triple-more.mp3",
+      "sha256": "091fefbae18bef026935ef18f0f218fafe985315c96722addb899472b44e379c"
+    },
+    {
+      "path": "assets/voice-sonia/triple-say.mp3",
+      "sha256": "3782806373ad8da0633a3468fc693db2ef7aa1a6c1a19b79f9fd2db89454a1f2"
+    },
+    {
+      "path": "assets/voice-sonia/triple-success.mp3",
+      "sha256": "2097f47d099a8218ccde6678b0bd05ae05f90b9afaa8d709912e5fdb282666a8"
+    },
+    {
+      "path": "assets/voice-sonia/twice-more.mp3",
+      "sha256": "0ece1fd361ece222751114facf9a5d0f9047fd598c63667f0234413de420cb38"
+    },
+    {
+      "path": "assets/voice-sonia/twice-say.mp3",
+      "sha256": "8d753c791c066d0df439c5c07b9d73ddcc4517dba5e49831ab03ddb167f43c6a"
+    },
+    {
+      "path": "assets/voice-sonia/twice-success.mp3",
+      "sha256": "31aa837b38809d839c62b9b9ff35611b488ff09cb70e2ed1274c6f505ccefdbc"
+    },
+    {
+      "path": "assets/voice-sonia/z-more.mp3",
+      "sha256": "7c14ae14431c18eeb80fa64726510810138a610f4d6bdb8919000e2a08b11608"
+    },
+    {
+      "path": "assets/voice-sonia/z-say.mp3",
+      "sha256": "eeb4a5fe69d948feed3f0cabe4ddf229784369cfd04702ab6163d257bdcbb34a"
+    },
+    {
+      "path": "assets/voice-sonia/z-success.mp3",
+      "sha256": "bdeab2dbc8331447d97ed57ed11c0b73fa1647010ff453358e724814a06cae2c"
+    },
+    {
+      "path": "game.html",
+      "sha256": "37a0c2329726d1b84a654ea98d48ac9e55882c43df4be34c45076fc273b198e9"
+    },
+    {
+      "path": "index.html",
+      "sha256": "37a0c2329726d1b84a654ea98d48ac9e55882c43df4be34c45076fc273b198e9"
+    },
+    {
+      "path": "math.js",
+      "sha256": "2c07d62a643227f048c314ec536203b319b76ccf2afb43633c859c18712d1b28"
+    },
+    {
+      "path": "miso-build.js",
+      "sha256": "79d4a3b4b26bde6bd1093e4306a6b66ab479c1ddb1f9a7782eb0a03ea8129e1e"
+    },
+    {
+      "path": "miso-course.css",
+      "sha256": "711bd00875baf6f38ff051cff094bea15adc5357b3fc33dc34fe09ba118f04f7"
+    },
+    {
+      "path": "miso-course.js",
+      "sha256": "6657f2022e17f91660ea3af1903423f130bdb2ed05081624efbdfb2b5c10e783"
+    },
+    {
+      "path": "miso-help.css",
+      "sha256": "4641e38036520462ebdc7e3229acb3c3cca8666b1ea2d36a37479b6a4ff418e9"
+    },
+    {
+      "path": "miso-help.js",
+      "sha256": "c8df68df0dcefc88c5bdf93dcad4a3caebc8779b26154be0a4d4f635850fa8d0"
+    },
+    {
+      "path": "miso-lessons.js",
+      "sha256": "0456310af3953ed20bb0d14a8846b5627c24de17b95e62e4ebfce18d7cc09e06"
+    },
+    {
+      "path": "miso-navigation.js",
+      "sha256": "a6cb467112e7fc853d75f02773854d221452077a58cdd0f84d90886de2acb603"
+    },
+    {
+      "path": "miso-sound.js",
+      "sha256": "d9abe727696c4fcf4e14b6f3c47b06a9e044f15c87eed25bf4b095fae9758879"
+    },
+    {
+      "path": "miso-story.js",
+      "sha256": "87584b4a2f7399fdca022f748fa0e64a4cb87b8e525ea64e7093ef1a15317119"
+    },
+    {
+      "path": "miso-voice.js",
+      "sha256": "8876bd9faeb905cb19b694529436c140ed2c9bd75dfc2ddbf41a3e3e00b7cd85"
+    },
+    {
+      "path": "miso.css",
+      "sha256": "e751aaa7bb7fda3143e6d015c2c4d96d319265abe35a5859a40a19c6b0fbf6e9"
+    },
+    {
+      "path": "miso.js",
+      "sha256": "01a25a4c302910c71bcb74c05440dc642aea9051fb8c10664046109518f529eb"
+    }
+  ]
+}

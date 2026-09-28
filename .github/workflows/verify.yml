@@ -1,0 +1,25 @@
+name: Verify release
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    # Do not consume private-repository Actions minutes without a separate choice.
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: git diff --exit-code -- docs
+      - run: npm test
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:public

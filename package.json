@@ -1,0 +1,17 @@
+{
+  "name": "kitty-maths",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A calm, interactive introduction to complex numbers with a kitty guide.",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "node tools/release/build-public.cjs",
+    "test": "node tests/math.test.cjs && node tests/release.test.cjs",
+    "test:public": "node tests/public-browser.test.cjs",
+    "serve": "node tools/release/serve.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.58.2"
+  },
+  "engines": {"node": ">=20"}
+}

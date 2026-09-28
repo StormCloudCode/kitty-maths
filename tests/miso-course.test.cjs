@@ -1,0 +1,41 @@
+const {chromium}=require('./runtime.cjs');
+const assert=require('node:assert/strict'),path=require('node:path');
+const navigate=require('./navigation-helper.cjs');
+const C=require('../miso-lessons.js');require('../miso-story.js');const course=require('../miso-course.js');
+(async()=>{
+ assert.equal(course.chapters.length,10);
+ const mapped=course.chapters[0].outline.flatMap(s=>s.lessons),steps=C.flatMap(c=>c.steps);
+ assert.deepEqual([...mapped].sort(),steps.map(s=>s.id).sort());assert.equal(new Set(mapped).size,36);
+ assert.equal(course.chapters[0].outline[1].title,'Irrational numbers');assert.equal(course.chapters[9].title,'Inferential Statistics');
+ const browser=await chromium.launch({headless:true,channel:'chrome'});
+ try{
+  const p=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[];
+  p.on('pageerror',e=>errors.push(e.message));
+  await p.goto('http://127.0.0.1:8765/tutor/game.html');await p.waitForLoadState('networkidle');
+  assert.equal(await p.locator('.contents-chapter').count(),10);assert.equal(await p.locator('.future-chapter').count(),9);
+  assert.equal(await p.locator('#chapter-percent').innerText(),'0%');assert.equal(await p.locator('[data-nav-step]').count(),36);
+  assert.equal(await p.locator('#contents-dialog').evaluate(d=>d.open&&!d.matches(':modal')),true);
+  await p.locator('#activity').focus();await p.keyboard.press('ArrowRight');assert.match(await p.locator('#board-status').innerText(),/at 1/);
+  await p.locator('[data-point="3,0"]').click();assert.equal(await p.locator('#chapter-percent').innerText(),'3%');
+  await p.reload();await p.waitForLoadState('networkidle');assert.equal(await p.locator('#chapter-percent').innerText(),'3%');
+  await navigate(p,7,0);assert.equal(await p.locator('#chapter-percent').innerText(),'3%','navigation alone is not completion');
+  assert.equal(await p.locator('[aria-current="step"]').count(),1);
+  await p.locator('#book').click();assert.match(await p.locator('#book-pdf').getAttribute('href'),/#page=31$/);await p.locator('[data-close="book-dialog"]').click();
+  const chapter=p.locator('[data-tree="chapter:complex-numbers"]');await chapter.locator(':scope > summary').click();assert.equal(await chapter.evaluate(d=>d.open),false);
+  await p.reload();await p.waitForLoadState('networkidle');assert.equal(await chapter.evaluate(d=>d.open),false,'chapter collapse saved');
+  await p.locator('[data-tree="chapter:chapter-10"] > summary').click();assert.match(await p.locator('[data-tree="chapter:chapter-10"]').innerText(),/Sampling distribution of the mean/);
+  assert.equal(await p.locator('[data-tree="chapter:chapter-10"] [data-nav-step]').count(),0,'future titles do not pretend to be playable');
+  await p.screenshot({path:path.join(__dirname,'miso-course-chapters.png'),fullPage:true});
+  await p.locator('#contents-close').click();assert.equal(await p.locator('body').evaluate(b=>b.classList.contains('contents-visible')),false);
+  await p.reload();assert.equal(await p.locator('#contents-dialog').evaluate(d=>d.open),false);await p.locator('#contents-toggle').click();
+  await navigate(p,0,0);await p.screenshot({path:path.join(__dirname,'miso-course-desktop.png'),fullPage:true});
+  await p.setViewportSize({width:390,height:844});await p.locator('#contents-toggle').click();
+  assert.equal(await p.locator('#contents-dialog').evaluate(d=>d.matches(':modal')),true);
+  await p.screenshot({path:path.join(__dirname,'miso-course-phone-menu.png'),fullPage:true});
+  await p.keyboard.press('Escape');assert.equal(await p.locator('#contents-dialog').evaluate(d=>d.open),false);
+  await navigate(p,1,1);assert.equal(await p.locator('#contents-dialog').evaluate(d=>d.open),false);
+  assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+  await p.screenshot({path:path.join(__dirname,'miso-course-phone.png'),fullPage:true});assert.deepEqual(errors,[]);
+  console.log('PASS: 10 source chapters, 36 unique lesson links, true guided progress, saved collapse/progress, future previews, corrected PDF offset, desktop keyboard and mobile drawer.');
+ }finally{await browser.close();}
+})().catch(e=>{console.error(e);process.exit(1);});
